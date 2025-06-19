@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>検索結果</title>
+</head>
+<body>
+    <h1>おすすめトレーニング</h1>
+    {% if results %}
+        <ul>
+        {% for r in results %}
+            <li>
+                <a href="{{ r.URL }}" target="_blank">{{ r.タイトル }}</a><br>
+                部位: {{ r.target_area }} | 難易度: {{ r.difficulty }} | 時間: {{ r.duration }}
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>条件に合うトレーニングが見つかりませんでした。</p>
+    {% endif %}
+    <a href="/">戻る</a>
+</body>
+</html>
