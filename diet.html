@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>トレーニングお助けBOT - 食事記録・評価</title>
+</head>
+<body>
+    <div class="container">
+        <!-- ヘッダー -->
+        <header class="header">
+            <h1>トレーニングお助けBOT</h1>
+            <p>あなたの健康とフィットネス目標をサポートします</p>
+        </header>
+        
+        <!-- ナビゲーション -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="profile.html">プロフィール設定</a></li>
+                <li><a href="training.html">今日のトレーニング</a></li>
+                <li><a href="diet.html" class="active">食事記録・評価</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <!-- 食事記録カード -->
+            <section class="card meal-record">
+                <h2>食事記録・評価</h2>
+                <p>日々の食事を記録して、栄養バランスをチェック。不足している栄養素や過剰摂取している要素を分析し、あなたの目標達成に必要な食事アドバイスを提供します。</p>
+                
+                <form id="meal-form">
+                    <div class="form-group">
+                        <label for="meal-date">日付</label>
+                        <input type="date" id="meal-date" name="meal-date" value="2025-05-16">
+                    </div>
+                    
+                    <div class="meal-time">
+                        <h3>朝食</h3>
+                        <div class="form-group">
+                            <label for="breakfast-food">食べたもの</label>
+                            <input type="text" id="breakfast-food" name="breakfast-food" placeholder="例：ごはん、納豆、味噌汁">
+                        </div>
+                        <div class="form-group">
+                            <label for="breakfast-calories">カロリー (kcal)</label>
+                            <input type="number" id="breakfast-calories" name="breakfast-calories" placeholder="例：400">
+                        </div>
+                        <div class="form-group">
+                            <label for="breakfast-protein">タンパク質 (g)</label>
+                            <input type="number" id="breakfast-protein" name="breakfast-protein" placeholder="例：15">
+                        </div>
+                        <div class="form-group">
+                            <label for="breakfast-carbs">炭水化物 (g)</label>
+                            <input type="number" id="breakfast-carbs" name="breakfast-carbs" placeholder="例：60">
+                        </div>
+                        <div class="form-group">
+                            <label for="breakfast-fat">脂質 (g)</label>
+                            <input type="number" id="breakfast-fat" name="breakfast-fat" placeholder="例：10">
+                        </div>
+                    </div>
+                    
+                    <div class="meal-time">
+                        <h3>昼食</h3>
+                        <div class="form-group">
+                            <label for="lunch-food">食べたもの</label>
+                            <input type="text" id="lunch-food" name="lunch-food" placeholder="例：サラダ、サンドイッチ">
+                        </div>
+                        <div class="form-group">
+                            <label for="lunch-calories">カロリー (kcal)</label>
+                            <input type="number" id="lunch-calories" name="lunch-calories" placeholder="例：500">
+                        </div>
+                        <div class="form-group">
+                            <label for="lunch-protein">タンパク質 (g)</label>
+                            <input type="number" id="lunch-protein" name="lunch-protein" placeholder="例：20">
+                        </div>
+                        <div class="form-group">
+                            <label for="lunch-carbs">炭水化物 (g)</label>
+                            <input type="number" id="lunch-carbs" name="lunch-carbs" placeholder="例：70">
+                        </div>
+                        <div class="form-group">
+                            <label for="lunch-fat">脂質 (g)</label>
+                            <input type="number" id="lunch-fat" name="lunch-fat" placeholder="例：15">
+                        </div>
+                    </div>
+                    
+                    <div class="meal-time">
+                        <h3>夕食</h3>
+                        <div class="form-group">
+                            <label for="dinner-food">食べたもの</label>
+                            <input type="text" id="dinner-food" name="dinner-food" placeholder="例：鶏胸肉、ブロッコリー、玄米">
+                        </div>
+                        <div class="form-group">
+                            <label for="dinner-calories">カロリー (kcal)</label>
+                            <input type="number" id="dinner-calories" name="dinner-calories" placeholder="例：600">
+                        </div>
+                        <div class="form-group">
+                            <label for="dinner-protein">タンパク質 (g)</label>
+                            <input type="number" id="dinner-protein" name="dinner-protein" placeholder="例：30">
+                        </div>
+                        <div class="form-group">
+                            <label for="dinner-carbs">炭水化物 (g)</label>
+                            <input type="number" id="dinner-carbs" name="dinner-carbs" placeholder="例：50">
+                        </div>
+                        <div class="form-group">
+                            <label for="dinner-fat">脂質 (g)</label>
+                            <input type="number" id="dinner-fat" name="dinner-fat" placeholder="例：20">
+                        </div>
+                    </div>
+                    
+                    <div class="meal-time">
+                        <h3>間食・その他</h3>
+                        <div class="form-group">
+                            <label for="snack-food">食べたもの</label>
+                            <input type="text" id="snack-food" name="snack-food" placeholder="例：ヨーグルト、フルーツ">
+                        </div>
+                        <div class="form-group">
+                            <label for="snack-calories">カロリー (kcal)</label>
+                            <input type="number" id="snack-calories" name="snack-calories" placeholder="例：200">
+                        </div>
+                        <div class="form-group">
+                            <label for="snack-protein">タンパク質 (g)</label>
+                            <input type="number" id="snack-protein" name="snack-protein" placeholder="例：5">
+                        </div>
+                        <div class="form-group">
+                            <label for="snack-carbs">炭水化物 (g)</label>
+                            <input type="number" id="snack-carbs" name="snack-carbs" placeholder="例：30">
+                        </div>
+                        <div class="form-group">
+                            <label for="snack-fat">脂質 (g)</label>
+                            <input type="number" id="snack-fat" name="snack-fat" placeholder="例：3">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="water-intake">水分摂取量 (ml)</label>
+                        <input type="number" id="water-intake" name="water-intake" placeholder="例：2000">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">食事を記録する</button>
+                </form>
+            </section>
+            
+            <!-- 栄養評価カード -->
+            <section class="card nutrition-evaluation">
+                <h2>今日の栄養評価</h2>
+                <p>摂取した栄養素の分析結果とおすすめのアドバイスを表示します。</p>
+                
+                <div class="nutrition-summary">
+                    <!-- 栄養バー -->
+                    <div class="nutrition-item">
+                        <span class="nutrition-label">カロリー</span>
+                        <div class="nutrition-bar">
+                            <div class="nutrition-progress" style="width: 85%; background-color: #f1c40f;"></div>
+                        </div>
+                        <span class="nutrition-value">1700 / 2000 kcal</span>
+                    </div>
+                    
+                    <div class="nutrition-item">
+                        <span class="nutrition-label">タンパク質</span>
+                        <div class="nutrition-bar">
+                            <div class="nutrition-progress nutrition-protein" style="width: 60%;"></div>
+                        </div>
+                        <span class="nutrition-value">70 / 120 g</span>
+                    </div>
+                    
+                    <div class="nutrition-item">
+                        <span class="nutrition-label">炭水化物</span>
+                        <div class="nutrition-bar">
+                            <div class="nutrition-progress nutrition-carbs" style="width: 90%;"></div>
+                        </div>
+                        <span class="nutrition-value">210 / 230 g</span>
+                    </div>
+                    
+                    <div class="nutrition-item">
+                        <span class="nutrition-label">脂質</span>
+                        <div class="nutrition-bar">
+                            <div class="nutrition-progress nutrition-fat" style="width: 70%;"></div>
+                        </div>
+                        <span class="nutrition-value">48 / 65 g</span>
+                    </div>
+                    
+                    <div class="nutrition-item">
+                        <span class="nutrition-label">食物繊維</span>
+                        <div class="nutrition-bar">
+                            <div class="nutrition-progress nutrition-fiber" style="width: 50%; background-color: #e74c3c;"></div>
+                        </div>
+                        <span class="nutrition-value">13 / 25 g</span>
+                    </div>
+                    
+                    <div class="nutrition-item">
+                        <span class="nutrition-label">水分</span>
+                        <div class="nutrition-bar">
+                            <div class="nutrition-progress nutrition-water" style="width: 95%; background-color: #3498db;"></div>
+                        </div>
+                        <span class="nutrition-value">1900 / 2000 ml</span>
+                    </div>
+                </div>
+                
+                <div class="advice-section">
+                    <h3>今日のアドバイス</h3>
+                    <div class="alert alert-danger">
+                        <p><strong>タンパク質が不足しています。</strong> 筋肉の回復と成長に必要なタンパク質を増やしましょう。鶏胸肉、魚、豆腐、卵などを積極的に摂取することをおすすめします。</p>
+                    </div>
+                    <div class="alert alert-danger">
+                        <p><strong>食物繊維が不足しています。</strong> 消化を助け、満腹感を維持するための食物繊維を増やしましょう。野菜、果物、全粒穀物などを取り入れることをおすすめします。</p>
+                    </div>
+                    <div class="alert alert-success">
+                        <p><strong>おすすめの食事の組み合わせ:</strong> 鶏胸肉のグリル（100g）+ ブロッコリー（1カップ）+ 玄米（1/2カップ）で、タンパク質約30g、食物繊維約8gを補うことができます。</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 過去の記録カード -->
+            <section class="card history-record">
+                <h2>過去の食事記録</h2>
+                <div class="form-group">
+                    <label for="history-date">日付選択</label>
+                    <input type="date" id="history-date" name="history-date">
+                </div>
+                <button type="button" class="btn btn-secondary">記録を表示</button>
+                
+                <div class="history-content">
+                    <p>過去の食事記録と評価を表示します。日付を選択してください。</p>
+                </div>
+            </section>
+        </main>
+        
+        <!-- フッター -->
+        <footer class="footer">
+            <p>© 2025 トレーニングお助けBOT All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
