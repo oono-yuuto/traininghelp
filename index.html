@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>今日のトレーニング - トレーニングお助けBOT</title>
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <h1 class="header-title">トレーニングお助けBOT</h1>
+            <p class="header-subtitle">あなたの健康とフィットネス目標をサポートします</p>
+        </header>
+        
+        <nav class="main-navigation">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html" class="nav-link">ホーム</a></li>
+                <li class="nav-item"><a href="profile.html" class="nav-link">プロフィール設定</a></li>
+                <li class="nav-item"><a href="training.html" class="nav-link">今日のトレーニング</a></li>
+                <li class="nav-item"><a href="diet.html" class="nav-link">食事記録・評価</a></li>
+            </ul>
+        </nav>
+        
+        <main class="main-content">
+            <div class="content-box">
+                <h2 class="section-title">今日のおすすめトレーニング</h2>
+                <p class="section-description">あなたのプロフィールに基づいたパーソナライズされたトレーニング動画です。効率的に理想の体を目指しましょう！</p>
+                
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="target-area">鍛えたい部位:</label>
+                        <select id="target-area" class="filter-select">
+                            <option value="all">すべて</option>
+                            <option value="arms">腕</option>
+                            <option value="chest">胸</option>
+                            <option value="back">背中</option>
+                            <option value="abs">腹筋</option>
+                            <option value="legs">脚</option>
+                            <option value="glutes">お尻</option>
+                            <option value="shoulders">肩</option>
+                            <option value="full-body">全身</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="difficulty">難易度:</label>
+                        <select id="difficulty" class="filter-select">
+                            <option value="all">すべて</option>
+                            <option value="beginner">初心者</option>
+                            <option value="intermediate">中級者</option>
+                            <option value="advanced">上級者</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="duration">時間:</label>
+                        <select id="duration" class="filter-select">
+                            <option value="all">すべて</option>
+                            <option value="short">15分以下</option>
+                            <option value="medium">15〜30分</option>
+                            <option value="long">30分以上</option>
+                        </select>
+                    </div>
+                    
+                    <button class="cta-button filter-button">フィルターを適用</button>
+                </div>
+            </div>
+            
+            <div class="content-box">
+                <h2 class="section-title">おすすめトレーニング動画</h2>
+                
+                <div class="video-grid">
+                    <!-- 動画カード1 -->
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="/api/placeholder/300/180" alt="30分間の腹筋トレーニング" class="thumbnail-img">
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">30分間の腹筋トレーニング</h3>
+                            <div class="video-tags">
+                                <span class="tag">腹筋</span>
+                                <span class="tag">強度:中</span>
+                            </div>
+                            <div class="video-meta">
+                                <span class="difficulty">中級者</span>
+                                <span class="duration">30分</span>
+                            </div>
+                            <p class="video-description">効果的な腹筋を鍛えるための30分間の完全なワークアウト。体幹強化にも効果的です。</p>
+                            <a href="#" class="cta-button video-button">トレーニングを開始</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 動画カード2 -->
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="/api/placeholder/300/180" alt="自宅でできる胸筋トレーニング" class="thumbnail-img">
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">自宅でできる胸筋トレーニング</h3>
+                            <div class="video-tags">
+                                <span class="tag">胸</span>
+                                <span class="tag">道具なし</span>
+                            </div>
+                            <div class="video-meta">
+                                <span class="difficulty">初心者</span>
+                                <span class="duration">20分</span>
+                            </div>
+                            <p class="video-description">器具なしで自宅でも簡単にできる胸筋を鍛えるためのエクササイズ集です。</p>
+                            <a href="#" class="cta-button video-button">トレーニングを開始</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 動画カード3 -->
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="/api/placeholder/300/180" alt="下半身強化HIIT" class="thumbnail-img">
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">下半身強化HIIT</h3>
+                            <div class="video-tags">
+                                <span class="tag">脚</span>
+                                <span class="tag">お尻</span>
+                                <span class="tag">HIIT</span>
+                            </div>
+                            <div class="video-meta">
+                                <span class="difficulty">上級者</span>
+                                <span class="duration">25分</span>
+                            </div>
+                            <p class="video-description">脚とお尻を集中的に鍛える高強度インターバルトレーニング。短時間で効果的に脂肪燃焼と筋力アップを目指せます。</p>
+                            <a href="#" class="cta-button video-button">トレーニングを開始</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 動画カード4 -->
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="/api/placeholder/300/180" alt="初心者向け全身トレーニング" class="thumbnail-img">
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">初心者向け全身トレーニング</h3>
+                            <div class="video-tags">
+                                <span class="tag">全身</span>
+                                <span class="tag">初心者向け</span>
+                            </div>
+                            <div class="video-meta">
+                                <span class="difficulty">初心者</span>
+                                <span class="duration">15分</span>
+                            </div>
+                            <p class="video-description">トレーニング初心者でも安心して取り組める全身運動のセットです。基本的な動きから始めましょう。</p>
+                            <a href="#" class="cta-button video-button">トレーニングを開始</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="site-footer">
+            <p class="copyright">© 2025 トレーニングお助けBOT All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
